@@ -46,7 +46,7 @@ const PostDetail = () => {
         />
 
         <FacebookShareButton
-          url={`http://localhost:3000/post/${data?.post?.slug}`}
+          url={`https://blog-theta-vert.vercel.app/post/${slug}`}
         >
           <FacebookIcon size={32} round />
         </FacebookShareButton>
