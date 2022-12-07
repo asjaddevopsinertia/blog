@@ -7,7 +7,7 @@ import { FacebookShareButton, FacebookIcon } from "next-share";
 const PostDetail = ({post}) => {
  console.log("post", post)
   return (
-    <>
+    <React.Fragment>
      <Head>
         <title>{post?.post?.title}</title>
         <meta
@@ -30,11 +30,11 @@ const PostDetail = ({post}) => {
           height={500}
         />
 
-        {/* <FacebookShareButton
+        <FacebookShareButton
           url={`https://blog-theta-vert.vercel.app/post/${post?.post?.slug}`}
         >
           <FacebookIcon size={32} round />
-        </FacebookShareButton> */}
+        </FacebookShareButton>
         <h1 className="text-[#222E3A] lg:text-[24px] font-bold mt-[14px] block mb-[15px]">
           {post?.post?.title}
         </h1>
@@ -44,7 +44,7 @@ const PostDetail = ({post}) => {
           dangerouslySetInnerHTML={{ __html: post?.post?.long_description }}
         ></p>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
